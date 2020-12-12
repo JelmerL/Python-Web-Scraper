@@ -1,0 +1,6 @@
+{
+    "name": "Allergy Finder",
+    "version": "0.1",
+    "description": "Extension to find any matched allergens of your choosing",
+    "manifest_version": 2
+  }
