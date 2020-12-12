@@ -2,12 +2,12 @@
     "name": "Allergy Finder",
     "version": "0.1",
     "description": "Extension to find any matched allergens of your choosing",
-    "manifest_version": 2
+    "manifest_version": 2,
 
     "browser action":{
-        "default_icon":"inon.png",
+        "default_icon":"icon.png",
         "default_popup":"popup.html"
-    }
+    },
     "permissions":[
         "activetab",
         "https://ajax.googleapis.com/"
