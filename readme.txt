@@ -1,5 +1,4 @@
-Resources for developing chrome extensions:
-- https://developer.chrome.com/docs/extensions/mv2/getstarted/
 
-Python conversion to Javascript:
-- https://www.brython.info/demo.html?lang=en#
+A simple string matching python program to find specific compound mentions in a website. 
+
+Port to a chrome extension in progress.
