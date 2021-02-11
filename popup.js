@@ -13,3 +13,8 @@ changeColor.onclick = function(element) {
           {code: 'document.body.style.backgroundColor = "' + color + '";'});
     });
   };
+
+page = document.getElementsByTagName('html')[0];
+pagetext = page.innerHTML;
+
+print(pagetext)
