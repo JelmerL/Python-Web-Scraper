@@ -451,7 +451,16 @@ questionable = [x.lower() for x in [
 #input natural names for matches
 naturalname = [x.lower() for x in [
     'tansy',
-
+    'Tanacetum vulgare',
+    'Tanacetum annuum',
+    'Laurus nobilis',
+    'Chrysanthemum morifolium',
+    'Cynara scolymus',
+    'Arctium',
+    'Matricaria chamomilla',
+    'Tagetes',
+    'Helianthus annuus',
+    'Helianthus',
     ]]
 
 #input CAS number matches
@@ -480,7 +489,7 @@ na = [x.lower() for x in [
     'NA05',
     'NA03',
     'NA10'
-]]
+    ]]
 
 keylog = 'y'
 
@@ -507,6 +516,8 @@ while keylog == 'y':
         matchedcompounds = []
         matchedCAS = []
         matchednaturalname = []
+        matchedna = []
+        matchedquestionable = []
 
         print()
         print("Compounds that are potential allergens found:")
@@ -533,6 +544,24 @@ while keylog == 'y':
                 print('\t',"-",x.capitalize())
                 matchednaturalname.append(x)
         if len(matchednaturalname)==0:
+            print('\t',"GOOD NEWS, NONE FOUND!")
+            
+        print()
+        print("NA codes that are potential allergens found:")
+        for x in na:
+            if x in page_text:
+                print('\t',"-",x.capitalize())
+                matchedna.append(x)
+        if len(matchedna)==0:
+            print('\t',"GOOD NEWS, NONE FOUND!")
+
+        print()
+        print("Questionable names that are potential allergens found:")
+        for x in questionable:
+            if x in page_text:
+                print('\t',"-",x.capitalize())
+                matchedquestionable.append(x)
+        if len(matchedquestionable)==0:
             print('\t',"GOOD NEWS, NONE FOUND!")
 
         #Ask if you want to do another search and restart the loop or exit
