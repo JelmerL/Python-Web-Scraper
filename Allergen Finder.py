@@ -148,7 +148,6 @@ compounds = [x.lower() for x in [
     'Lexamine S 13',
     'NSC 86167',
     '86167',
-    'fragrance'
     ]]
 
 #input questionable allergens
@@ -202,7 +201,9 @@ questionable = [x.lower() for x in [
     'boneset',
     'burdock',
     'chamomile',
+    'CHAMOMILLA',
     'chicory',
+    'Calendula',
     'cocklebur',
     'costus of perfumery',
     'encelia',
@@ -229,6 +230,8 @@ questionable = [x.lower() for x in [
     'Citral',
     'a-Hexylcin-namicaldehyde',
     'fragrance',
+    'fragrance-free',
+    'parfum',
     'Coumarin',
     '2H-1-Benzopyran-2-one',
     'Coumarin [NF X]',
@@ -444,8 +447,7 @@ questionable = [x.lower() for x in [
     'Vanlube PCX',
     'Vianol',
     'Vulkanox KB',
-    '0-Di-tert-butyl-p-methylphenol',
-    'BAT'    
+    '0-Di-tert-butyl-p-methylphenol'
 ]]
 
 #input natural names for matches
@@ -561,6 +563,8 @@ while keylog == 'y':
             if x in page_text:
                 print('\t',"-",x.capitalize())
                 matchedquestionable.append(x)
+                if x.lower() == "fragrance-free":
+                    print("!! Looks like they're advertising fragrance-free somewhere on the page !!")
         if len(matchedquestionable)==0:
             print('\t',"GOOD NEWS, NONE FOUND!")
 
