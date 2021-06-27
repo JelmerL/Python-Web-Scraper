@@ -55,6 +55,7 @@ compounds = [x.lower() for x in [
     'Rotax',
     'Royal MBT',
     'Soxinol M',
+    'stearate',
     'Sulfadene',
     'Thiotax',
     'USAF GY-3',
